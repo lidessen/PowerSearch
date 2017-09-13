@@ -7,8 +7,8 @@ function google {
     Start-Process -FilePath ("www.google.com/search?q=" + $args);
 }
 
-function wiki {
-    Start-Process -FilePath ("www.wikipedia.org/wiki/" + $args);
+function wiki($query) {
+    Start-Process -FilePath ("www.wikipedia.org/wiki/" + $query);
 }
 
 function github {

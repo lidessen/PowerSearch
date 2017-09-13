@@ -29,7 +29,7 @@ function stack {
 }
 
 function jd {
-    Start-Process -FilePath ("https://search.jd.com/Search?keyword=" + [System.Web.HttpUtility]::UrlEncode($args));
+    Start-Process -FilePath ("https://search.jd.com/Search?keyword=" + [System.Web.HttpUtility]::UrlEncode($args) + "&enc=utf-8");
 }
 
 function edge($url) {

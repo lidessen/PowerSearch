@@ -1,3 +1,4 @@
+[Reflection.Assembly]::LoadWithPartialName("System.Web") | Out-Null
 function bing {
     #Start-Process microsoft-edge:www.bing.com?q=$url;
     Start-Process -FilePath ("www.bing.com?q=" + $args);
@@ -28,7 +29,7 @@ function stack {
 }
 
 function jd {
-    Start-Process -FilePath ("https://search.jd.com/Search?keyword=" + $args);
+    Start-Process -FilePath ("https://search.jd.com/Search?keyword=" + [System.Web.HttpUtility]::UrlEncode($args));
 }
 
 function edge($url) {

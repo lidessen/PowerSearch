@@ -1,42 +1,42 @@
-function bing($query) {
+function bing {
     #Start-Process microsoft-edge:www.bing.com?q=$url;
-    Start-Process -FilePath ("www.bing.com?q=" + $query);
+    Start-Process -FilePath ("www.bing.com?q=" + $args);
 }
 
-function google($query) {
-    Start-Process -FilePath ("www.google.com/search?q=" + $query);
+function google {
+    Start-Process -FilePath ("www.google.com/search?q=" + $args);
 }
 
-function wiki($query) {
-    Start-Process -FilePath ("www.wikipedia.org/wiki/" + $query);
+function wiki {
+    Start-Process -FilePath ("www.wikipedia.org/wiki/" + $args);
 }
 
-function github($query) {
-    Start-Process -FilePath ("www.github.com/search?q=" + $query);
+function github {
+    Start-Process -FilePath ("www.github.com/search?q=" + $args);
 }
 
-function zhihu($query) {
-    Start-Process -FilePath ("www.zhihu.com/search?q=" + $query);
+function zhihu {
+    Start-Process -FilePath ("www.zhihu.com/search?q=" + $args);
 }
 
 function tieba($query) {
-    Start-Process -FilePath ("https://tieba.baidu.com/f?kw=" + $query);
+    Start-Process -FilePath ("https://tieba.baidu.com/f?kw=" + $args);
 }
 
-function stack($query) {
+function stack {
     Start-Process -FilePath ("www.stackoverflow.com/search?q=" + $query);
 }
 
-function jd($query) {
-    Start-Process -FilePath ("https://search.jd.com/Search?keyword=" + $query);
+function jd {
+    Start-Process -FilePath ("https://search.jd.com/Search?keyword=" + $args);
 }
 
 function edge($url) {
     if (-not $url.Contains("www")) {
         $url = "www." + $url;
     }
-	#Start-Process microsoft-edge:$url;
-	Start-Process -FilePath $url;
+    #Start-Process microsoft-edge:$url;
+    Start-Process -FilePath $url;
 }
 
 function chrome($url) {

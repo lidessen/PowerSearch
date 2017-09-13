@@ -27,3 +27,5 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 * 京东 - jd surface laptop
 
+* 斗鱼 - douyu 6324 （少数主播支持直接输名字）
+

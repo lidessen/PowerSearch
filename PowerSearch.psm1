@@ -4,7 +4,7 @@ function bing {
 }
 
 function google {
-    Start-Process -FilePath ("www.google.com/search?q=" + $args);
+    Start-Process -FilePath "chrome.exe" ("www.google.com/search?q=" + ($args -join "+"));
 }
 
 function wiki($query) {

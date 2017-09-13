@@ -32,6 +32,17 @@ function jd {
     Start-Process -FilePath ("https://search.jd.com/Search?keyword=" + [System.Web.HttpUtility]::UrlEncode($args) + "&enc=utf-8");
 }
 
+function douyu($query) {
+    $query = switch ($query) {
+        "³ÂÒ»·¢" { "67373" }
+        "·¢½ã" { "67373" }
+        "º«Ñ©" { "3172509" }
+        "ÐÀÐÀ" { "434847" }
+        Default { $query }
+    }
+    Start-Process -FilePath ("www.douyu.com/" + $query);
+}
+
 function edge($url) {
     if (-not $url.Contains("www")) {
         $url = "www." + $url;

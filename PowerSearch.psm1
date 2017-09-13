@@ -20,11 +20,11 @@ function zhihu {
 }
 
 function tieba($query) {
-    Start-Process -FilePath ("https://tieba.baidu.com/f?kw=" + $args);
+    Start-Process -FilePath ("https://tieba.baidu.com/f?kw=" + $query);
 }
 
 function stack {
-    Start-Process -FilePath ("www.stackoverflow.com/search?q=" + $query);
+    Start-Process -FilePath ("www.stackoverflow.com/search?q=" + $args);
 }
 
 function jd {

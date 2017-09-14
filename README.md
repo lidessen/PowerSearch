@@ -27,5 +27,14 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 * 京东 - jd surface laptop
 
-* 斗鱼 - douyu 6324 （少数主播支持直接输名字）
+* 斗鱼 - douyu 6324 配置文件在用户根目 `psconfig/douyu.json`，示例：
+    ```json
+    {
+    "陈一发": 67373,
+    "发姐": 67373,
+    "韩雪": 3172509,
+    "小熊猫": 434847,
+    "伟神": 7911
+    }
+    ```
 

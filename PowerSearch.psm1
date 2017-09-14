@@ -33,12 +33,13 @@ function jd {
 }
 
 function douyu($query) {
-    $query = switch ($query) {
-        "³ÂÒ»·¢" { "67373" }
-        "·¢½ã" { "67373" }
-        "º«Ñ©" { "3172509" }
-        "ÐÀÐÀ" { "434847" }
-        Default { $query }
+    $raw = Get-Content -Encoding UTF8 $HOME/psconfig/douyu.json
+    $rooms = ConvertFrom-Json ([string]$raw)
+    $query = if ($rooms.$query) {
+        $rooms.$query
+    }
+    else {
+        $query
     }
     Start-Process -FilePath ("www.douyu.com/" + $query);
 }

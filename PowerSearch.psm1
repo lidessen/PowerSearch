@@ -30,7 +30,7 @@ function wiki($query) {
 function github {
     if($args.Length -gt 0){
         if ($args[0].Contains("/")) {
-            Start-Process -FilePath ("www.github.com/" + $args[0].Replace("/", ""));
+            Start-Process -FilePath ("www.github.com" + $args[0]);
         }
         else {
             Start-Process -FilePath ("www.github.com/search?q=" + $args);

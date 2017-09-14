@@ -13,7 +13,11 @@ function wiki($query) {
 }
 
 function github {
-    Start-Process -FilePath ("www.github.com/search?q=" + $args);
+    if($args.Contains("/")){
+        Start-Process -FilePath ("www.github.com/" + $args);
+    }else{
+        Start-Process -FilePath ("www.github.com/search?q=" + $args);
+    }
 }
 
 function zhihu {

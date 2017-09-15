@@ -56,6 +56,14 @@ function tieba($query) {
     }
 }
 
+function baike($query) {
+    if($query){
+        Start-Process -FilePath ("https://baike.baidu.com/item/" + $query);
+    }else{
+        Start-Process -FilePath ("https://baike.baidu.com");
+    }
+}
+
 function stack {
     if($args.Length -gt 0){
         Start-Process -FilePath ("www.stackoverflow.com/search?q=" + $args);

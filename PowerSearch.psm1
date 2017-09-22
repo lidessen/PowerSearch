@@ -72,6 +72,15 @@ function stack {
     }
 }
 
+function bili {
+    if($args.Length -gt 0){
+        Start-Process -FilePath ("https://search.bilibili.com/all?keyword=" + $args);
+    }
+    else{
+        Start-Process -FilePath ("https://www.bilibili.com/");
+    }
+}
+
 function jd {
     if($args.Length -gt 0){
         Start-Process -FilePath ("https://search.jd.com/Search?keyword=" + [System.Web.HttpUtility]::UrlEncode($args) + "&enc=utf-8");
